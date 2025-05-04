@@ -33,7 +33,7 @@ export default function Navbar() {
                 alt="Confluenxe Logo"
                 width={40}
                 height={40}
-                className="mr-2"
+                className="mr-2 rounded-sm"
               />
               <span className={`font-bold text-xl ${isScrolled ? "text-primary" : "text-white"}`}>Confluenxe</span>
             </Link>

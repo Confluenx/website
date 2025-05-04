@@ -7,17 +7,17 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-primary">
       {/* Background pattern/overlay */}
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/bg-img.jpg?height=1080&width=1920')] bg-cover bg-center opacity-20"></div>
 
       {/* Content */}
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 mx-auto flex flex-col items-center text-center pt-24">
-        <Image
+        {/* <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000266444-t61D4EgwE3Y1LNF8Xb90xOUs1JpZfV.png"
           alt="Confluenxe Logo"
           width={120}
           height={120}
           className="mb-8 animate-pulse"
-        />
+        /> */}
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
           Bridging Talent with Opportunity
@@ -38,7 +38,7 @@ export default function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="border-2 border-white bg-primary text-white hover:bg-white/10 text-lg py-6 flex-1"
+            className="border-2 border-white bg-pr text-white hover:bg-white/10 text-lg py-6 flex-1"
           >
             <Link href="#scout-signup">
               Join as Scout
