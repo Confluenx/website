@@ -109,7 +109,7 @@ export default function CallToAction() {
               asChild
               size="lg"
               variant="outline"
-              className="w-full border-2 border-white text-white hover:bg-white/10"
+              className="w-full border-2 border-white text-gray-900 hover:bg-white/10"
             >
               <Link href="#scout-signup" id="scout-signup">
                 Join as Scout

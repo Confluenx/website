@@ -30,7 +30,7 @@ export default function GlobalImpact() {
   ]
 
   return (
-    <section className="py-24 bg-primary text-white">
+    <section className="py-24 w-full bg-primary text-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Global Impact</h2>

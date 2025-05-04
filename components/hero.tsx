@@ -38,7 +38,7 @@ export default function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="border-2 border-white text-white hover:bg-white/10 text-lg py-6 flex-1"
+            className="border-2 border-white bg-primary text-white hover:bg-white/10 text-lg py-6 flex-1"
           >
             <Link href="#scout-signup">
               Join as Scout
