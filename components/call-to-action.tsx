@@ -54,7 +54,7 @@ export default function CallToAction() {
               </li>
             </ul>
             <Button asChild size="lg" className="w-full bg-primary text-white hover:bg-primary/90">
-              <Link href="#athlete-signup" id="athlete-signup">
+              <Link href="/signup?role=athlete">
                 Join as Athlete
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -109,9 +109,9 @@ export default function CallToAction() {
               asChild
               size="lg"
               variant="outline"
-              className="w-full border-2 border-white text-gray-900 hover:bg-white/10"
+              className="w-full border-2 border-white hover:text-white text-gray-900 hover:bg-white/10"
             >
-              <Link href="#scout-signup" id="scout-signup">
+              <Link href="/signup?role=scout">
                 Join as Scout
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
