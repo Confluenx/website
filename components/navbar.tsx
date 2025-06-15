@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"}`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-cente justify-around">
+        <div className="flex h-16 items-center justify-around">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
@@ -35,7 +35,7 @@ export default function Navbar() {
                 height={40}
                 className="mr-2 rounded-sm"
               />
-              <span className={`font-bold text-xl ${isScrolled ? "text-primary" : "text-white"}`}>Confluenxe</span>
+              <span className={`font-bold uppercase text-xl ${isScrolled ? "text-primary" : "text-white"}`}>Confluenxe</span>
             </Link>
           </div>
 
@@ -71,18 +71,12 @@ export default function Navbar() {
               Contact
             </Link>
 
+            <div className="flex items-center space-x-2">
+              <Button asChild className="bg-primary text-white hover:bg-primary/90">
+                <Link href="/signup?role=scout">Get Started</Link>
+              </Button>
+            </div>
           </nav>
-          <div className="flex items-center space-x-2">
-            {/* <Button
-              variant="outline"
-              className={`border-2 ${isScrolled ? "border-primary text-primary hover:bg-primary hover:text-white" : "border-white text-white hover:bg-white hover:text-primary text-primary"}`}
-            >
-              Sign In
-            </Button> */}
-            <Button asChild className="bg-primary text-white hover:bg-primary/90">
-              <Link href="/signup?role=scout">Get Started</Link>
-            </Button>
-          </div>
 
           <Sheet>
             <SheetTrigger asChild>

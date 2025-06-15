@@ -29,7 +29,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg py-6 flex-1">
-            <Link href="#athlete-signup">
+            <Link href="/signup?role=athlete">
               Join as Athlete
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
@@ -40,7 +40,7 @@ export default function Hero() {
             variant="outline"
             className="border-2 border-white bg-pr text-white hover:bg-white/10 text-lg py-6 flex-1"
           >
-            <Link href="#scout-signup">
+            <Link href="/signup?role=scout">
               Join as Scout
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
