@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Confluenxe - Global Sports Scouting Platform",
   description: "Bridging talent with opportunity through innovative technology and global connections.",
-    generator: 'v0.dev'
+  generator: 'Iysah - TheProductDude',
 }
 
 export default function RootLayout({
