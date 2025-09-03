@@ -65,7 +65,7 @@ export default function Footer() {
                   How It Works
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#testimonials" className="text-gray-400 hover:text-white transition-colors">
                   Success Stories
                 </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                   Careers
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -127,13 +127,13 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Confluenxe. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href="#" className="text-gray-500 hover:text-white text-sm">
+              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-white text-sm">
+              <Link href="/terms" className="text-gray-500 hover:text-white text-sm">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-white text-sm">
+              <Link href="/cookie" className="text-gray-500 hover:text-white text-sm">
                 Cookie Policy
               </Link>
             </div>
