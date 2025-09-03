@@ -13,88 +13,71 @@ function page() {
   }
 
   return (
-    <div style={{
-      maxWidth: 400,
-      margin: '20 auto',
-      padding: '2rem',
-      fontFamily: 'inherit'
-    }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>
-        Account Delete Request
-      </h1>
-      <p style={{ marginBottom: '2rem', color: '#374151' }}>
-        We're sorry to see you go. Please provide your email or phone number associated with your account to initiate the deletion process.
-      </p>
-      {submitted ? (
-        <div style={{ color: 'green', marginBottom: '1rem' }}>
-          Your request has been submitted. We will contact you soon.
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '1rem' }}>
-            <label style={{ fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
-              Contact Method
-            </label>
-            <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '1rem' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <input
-                  type="radio"
-                  name="contactMethod"
-                  value="email"
-                  checked={contactMethod === 'email'}
-                  onChange={() => setContactMethod('email')}
-                />
-                Email
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow">
+        <h1 className="text-3xl font-bold mb-4 text-gray-800 text-center">
+          Account Delete Request
+        </h1>
+        <p className="mb-6 text-gray-600 text-center">
+          We're sorry to see you go. Please provide your email or phone number associated with your account to initiate the deletion process.
+        </p>
+        {submitted ? (
+          <div className="text-green-600 mb-4 text-center">
+            Your request has been submitted. We will contact you soon.
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label className="font-medium block mb-2 text-gray-700">
+                Contact Method
               </label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <input
-                  type="radio"
-                  name="contactMethod"
-                  value="phone"
-                  checked={contactMethod === 'phone'}
-                  onChange={() => setContactMethod('phone')}
-                />
-                Phone Number
-              </label>
+              <div className="flex gap-8 mb-2">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="contactMethod"
+                    value="email"
+                    checked={contactMethod === 'email'}
+                    onChange={() => setContactMethod('email')}
+                    className="form-radio"
+                  />
+                  Email
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="contactMethod"
+                    value="phone"
+                    checked={contactMethod === 'phone'}
+                    onChange={() => setContactMethod('phone')}
+                    className="form-radio"
+                  />
+                  Phone Number
+                </label>
+              </div>
             </div>
-          </div>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{ fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
-              {contactMethod === 'email' ? 'Email Address' : 'Phone Number'}
-            </label>
-            <input
-              type={contactMethod === 'email' ? 'email' : 'tel'}
-              placeholder={contactMethod === 'email' ? 'your@email.com' : 'Your phone number'}
-              value={contactValue}
-              onChange={e => setContactValue(e.target.value)}
-              required
-              style={{
-                width: '100%',
-                padding: '0.75rem',
-                borderRadius: '6px',
-                border: '1px solid #d1d5db',
-                fontSize: '1rem'
-              }}
-            />
-          </div>
-          <button
-            type="submit"
-            style={{
-              width: '100%',
-              background: '#06b6d4',
-              color: '#fff',
-              padding: '0.75rem',
-              border: 'none',
-              borderRadius: '6px',
-              fontWeight: 600,
-              fontSize: '1rem',
-              cursor: 'pointer'
-            }}
-          >
-            Request Deletion
-          </button>
-        </form>
-      )}
+            <div className="mb-6">
+              <label className="font-medium block mb-2 text-gray-700">
+                {contactMethod === 'email' ? 'Email Address' : 'Phone Number'}
+              </label>
+              <input
+                type={contactMethod === 'email' ? 'email' : 'tel'}
+                placeholder={contactMethod === 'email' ? 'your@email.com' : 'Your phone number'}
+                value={contactValue}
+                onChange={e => setContactValue(e.target.value)}
+                required
+                className="w-full px-4 py-3 rounded-md border border-gray-300 text-base focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-cyan-400 hover:bg-cyan-500 text-white py-3 rounded-md font-semibold text-base transition"
+            >
+              Request Deletion
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   )
 }
